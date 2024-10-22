@@ -1,0 +1,73 @@
+{
+    "name": "martian/laracaptcha",
+    "description": "A Laravel package to seamlessly use hCapthca or reCaptcha on your forms or RESTful APIs",
+    "keywords": [
+        "martian",
+        "laracaptcha",
+        "recaptcha",
+        "hcaptcha",
+        "validation",
+        "php",
+        "captcha",
+        "no-captcha",
+        "laravel",
+        "laravel-package",
+        "invisible-recaptcha",
+        "google-recaptcha",
+        "google",
+        "recaptcha-v3",
+        "recaptcha-v2",
+        "recaptcha-v2-invisible",
+        "recaptcha-v2-checkbox",
+        "laravel recaptcha",
+        "recaptcha v3",
+        "recaptcha v2"
+    ],
+    "homepage": "https://github.com/hendurhance/laracaptcha",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Josiah Endurance",
+            "email": "hendurhance.dev@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^10.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Martian\\LaraCaptcha\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Martian\\LaraCaptcha\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Martian\\LaraCaptcha\\Providers\\LaraCaptchaServiceProvider"
+            ],
+            "aliases": {
+                "LaraCaptcha": "Martian\\LaraCaptcha\\Facades\\LaraCaptchaFacade"
+            }
+        }
+    }
+}
